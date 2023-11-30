@@ -15,6 +15,7 @@ import { CommentsListComponent } from './comments/comments-list/comments-list.co
 import { HomeComponent } from './pages/home/home.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { FooterComponent } from './layouts/footer/footer.component';
+import { PostCardComponent } from './layouts/post-card/post-card.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FooterComponent } from './layouts/footer/footer.component';
     CommentsListComponent,
     HomeComponent,
     AboutUsComponent,
-    FooterComponent
+    FooterComponent,
+    PostCardComponent
   ],
   imports: [
     BrowserModule,
