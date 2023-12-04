@@ -10,6 +10,7 @@ import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { environment } from 'src/environments/environment.development';
+import { CategoriesComponent } from './categories/categories.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { environment } from 'src/environments/environment.development';
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
+    CategoriesComponent,
 
   ],
   imports: [
