@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
-import { Firestore,collection, addDoc } from '@angular/fire/firestore'
 import { CategoriesService } from '../services/categories.service';
+import { Category } from '../models/category';
 
 @Component({
   selector: 'app-categories',
@@ -12,7 +12,11 @@ export class CategoriesComponent {
   constructor( private categoryService: CategoriesService) { }
 
   onSubmit(formData: any) {
-    this.categoryService.saveData(formData)
+
+    const categoryData :Category = {
+      category: formData.value.category
+    }
+    this.categoryService.saveData(categoryData)
 
   }
 
