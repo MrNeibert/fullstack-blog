@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class CategoriesComponent implements OnInit {
 
+
   categoryArray !: Observable<any>;
   formCategory !: string;
   formStatus: string = 'Add';
@@ -22,14 +23,14 @@ export class CategoriesComponent implements OnInit {
   }
 
   onSubmit(formData: any) {
-
     const categoryData: Category = { category: formData.value.category };
 
     if (this.formStatus == 'Add') {
       this.categoryService.saveData(categoryData);
       formData.reset();
     }
-    else if(this.formStatus == 'Edit'){
+    
+    else if (this.formStatus == 'Edit') {
       this.categoryService.updateData(this.categoryId, categoryData);
       formData.reset();
       this.formStatus = 'Add'
@@ -41,5 +42,9 @@ export class CategoriesComponent implements OnInit {
     this.formCategory = category;
     this.formStatus = 'Edit'
     this.categoryId = id;
+  }
+
+  onDelete(id: any) {
+    this.categoryService.deleteData(id);
   }
 }
