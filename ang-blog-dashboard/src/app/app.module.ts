@@ -18,6 +18,8 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
 import { getRemoteConfig, provideRemoteConfig } from '@angular/fire/remote-config';
+import { AllPostComponent } from './post/all-post/all-post.component';
+import { NewPostComponent } from './post/new-post/new-post.component';
 
 
 
@@ -28,6 +30,8 @@ import { getRemoteConfig, provideRemoteConfig } from '@angular/fire/remote-confi
     FooterComponent,
     DashboardComponent,
     CategoriesComponent,
+    AllPostComponent,
+    NewPostComponent,
 
   ],
   imports: [
