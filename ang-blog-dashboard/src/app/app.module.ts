@@ -6,6 +6,10 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
+import { AngularEditorModule } from '@kolkov/angular-editor';
+
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layouts/header/header.component';
@@ -37,6 +41,7 @@ import { NewPostComponent } from './post/new-post/new-post.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     ToastrModule.forRoot(),
 
@@ -46,6 +51,8 @@ import { NewPostComponent } from './post/new-post/new-post.component';
     provideFirestore(() => getFirestore()),
     provideDatabase(() => getDatabase()),
     provideRemoteConfig(() => getRemoteConfig()),
+    AngularEditorModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
